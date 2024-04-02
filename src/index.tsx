@@ -2,8 +2,8 @@ import React from 'react'; // default import
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import App, { Test1, Test2 } from './App';
-import ClassComponentSample from './components/ClassComponentSample';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement
@@ -14,10 +14,9 @@ const root = ReactDOM.createRoot(
 // <Layout>element</Layout> open-close tag ile tanımlama (bu kullanım için özel bir şekilde tanımlanmalıdır.)
 root.render(
 	<>
-		{/* <Test1 />
-		<Test2 />
-		<App /> */}
-		<App />
+		<BrowserRouter>
+			<App />
+		</BrowserRouter>
 	</>
 );
 
