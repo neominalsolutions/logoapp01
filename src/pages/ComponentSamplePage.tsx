@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import FunctionComponentSample from '../components/FunctionComponentSample';
+import env from 'react-dotenv';
 
 function ComponentSamplePage() {
 	const [visible, setVisible] = useState<boolean>(false); // local State
 
 	return (
 		<div className="App">
+			S3_BUCKET: {process.env.S3_BUCKET}
 			{/* <FunctionComponentSample
 				title="Func Component"
 				description="Function Component Desc"

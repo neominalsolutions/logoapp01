@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getTodos } from '../services/todo.service';
 import { Todo } from '../models/todo.model';
-import useSWR, { Fetcher } from 'swr';
+import useSWR, { Fetcher, mutate } from 'swr';
 
 function TodoPageSwr() {
 	const fakeData = [
@@ -62,6 +62,13 @@ function TodoPageSwr() {
 		<>
 			{data && (
 				<>
+					<button
+						onClick={() => {
+							mutate('todos'); // clear only a certain cache key
+						}}
+					>
+						Manuel Clear Cache
+					</button>
 					<div>
 						{data.map((item: Todo) => {
 							return <div key={item.id}>{item.title}</div>;
