@@ -7,7 +7,7 @@ function ComponentSamplePage() {
 
 	return (
 		<div className="App">
-			S3_BUCKET: {process.env.S3_BUCKET}
+			S3_BUCKET: {process.env.REACT_APP_ENV_S3_BUCKET}
 			{/* <FunctionComponentSample
 				title="Func Component"
 				description="Function Component Desc"

@@ -5,7 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 // import env from 'react-dotenv';
-require('dotenv').config({ path: './.env' });
+// require('dotenv').config({ path: './.env' });
 
 console.log('env', process.env); // remove this after you've confirmed it is working
 
